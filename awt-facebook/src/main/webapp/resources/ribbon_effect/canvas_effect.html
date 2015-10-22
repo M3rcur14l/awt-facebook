@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Ribbon Lines</title>
+
+    <script src="./colorHSV.js"></script>
+    <script src="./ribbonLines.js"></script>
+	<script src="./pixel.js"></script>
+</head>
+
+<body>
+
+    <canvas id="ribbonLines" onmousemove="ribbonsMouseMove(event)" width="900px" height="600px"/>
+
+    <script>
+        var canvas = document.getElementById("ribbonLines");
+        
+        var ctx = canvas.getContext("2d");
+        
+        var w = parseInt(canvas.width);
+        var h = parseInt(canvas.height);
+        
+		ctx.fillStyle = "black";
+        
+        ctx.fillRect(0, 0, w, h);
+		
+		var color = new ColorHSV(0, 0.8, 1);
+        var ribbons = new RibbonLines(ctx,w,h);
+		var pixels = new pixels(ctx);
+
+        setInterval(render, 30);
+
+        function ribbonsMouseMove(event)
+        {
+            ribbons.pushPoint(event.clientX, event.clientY);
+			pixels.add(event.clientX, event.clientY);
+        }
+
+        function render()
+        {
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.fillStyle = "black";
+			ctx.fillRect(0, 0, w, h);
+            
+            if (color._h == 360) color.setH(0);
+            else color.setH(color._h + 1);
+
+            ribbons.color = color;
+            ribbons.render();
+			pixels.color = color;
+            pixels.render();
+        }
+    </script>
+</body>
+</html>

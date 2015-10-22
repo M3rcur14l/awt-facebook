@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:c="http://www.springframework.org/schema/c" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!-- Data Persistence Context: defines all component of the persistence 
+		layer -->
+
+	<!-- The DataSource used by the application for the database connection -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="${jdbc.driverClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+
+	<!-- The transaction manager which handles the database transactions -->
+	<bean id="transactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+		c:_-ref="dataSource" />
+
+	<!-- A Spring jdbc template for using the jdbc connection -->
+	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"
+		c:_-ref="dataSource" />
+	
+	<!-- Hibernate session factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.awt.facebook.persistence" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Friendships hibernate data access object interface implementation -->
+	<bean id="friendshipsDao" class="com.awt.facebook.persistence.FriendshipsDaoHibernate"
+		autowire="constructor" />
+		
+	<!-- Friendships jdbc data access object interface implementation -->
+	<!-- <bean id="friendshipsDao" class="com.awt.facebook.persistence.FriendshipsDaoJdbc" -->
+	<!-- autowire="constructor" /> -->
+	
+	<tx:annotation-driven transaction-manager="transactionManagerHibernate" />
+	
+	<!-- The transaction manager used by Hibernate -->
+	<bean id="transactionManagerHibernate"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- The task executor for asynchronous database storing -->
+	<bean id="asyncSaveExecutor" class="org.springframework.core.task.SimpleAsyncTaskExecutor">
+	</bean>
+</beans>

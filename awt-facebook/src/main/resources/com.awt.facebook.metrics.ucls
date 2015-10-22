@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" language="java" name="com.awt.facebook.metrics" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/metrics" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="345" width="467" x="34" y="30"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="com.awt.facebook.metrics.MetricService" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/metrics/MetricService.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="274" y="266"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <note id="3">    
+    <position height="47" width="200" x="176" y="103"/>    
+    <text><![CDATA[This class is used to compute all the metrics used in the application]]>
+    </text>  
+  </note>  
+  <text-link id="4">    
+    <link-end type="SOURCE" refId="3"/>    
+    <link-end type="TARGET" refId="2"/>  
+  </text-link>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

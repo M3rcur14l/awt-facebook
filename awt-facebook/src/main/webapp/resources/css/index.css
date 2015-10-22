@@ -1,0 +1,96 @@
+#login_bg { background-color: #234567;
+            height: auto;}
+
+h3 { 
+    color: #ffffff;}
+
+footer {bottom: 0; left: 0; }
+
+#back-top {
+	position: fixed;
+	bottom: 150px;
+	margin-right: -150px;
+}
+#subButton {
+	position: fixed;
+	bottom: 300px;
+	margin-right: -150px;
+	width: 150px;
+	height: 108px;
+	text-align: center;
+}
+#graphButton {
+	position: fixed;
+	bottom: 300px;
+	margin-right: -150px;
+	width: 150px;
+	text-align: center;
+}
+
+#back-top a {
+	width: 108px;
+	display: block;
+	text-align: center;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #000;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover {
+	color: #000;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+	width: 150px;
+	height: 108px;
+	display: block;
+	margin-bottom: 7px;
+	background: #ddd url(../img/up-arrow1.png) no-repeat center center;
+
+	/* rounded corners */
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	/* transition */
+	-webkit-transition: 1s;
+	-moz-transition: 1s;
+	transition: 1s;
+}
+#back-top a:hover span {
+	background-color: #777;
+}
+
+i {
+font-size:  30px;
+}
+
+.fi-torso {
+	font-size:  20px;
+}
+
+#graph {
+	border:2px solid gray;
+	height: auto;
+}
+
+#myPanel {
+	bg: #123456;
+}
+
+.top-bar {
+	background-color: #fff;
+}
+
+#subButton {
+	text-align: center;
+}
+#innerContent {
+	
+}

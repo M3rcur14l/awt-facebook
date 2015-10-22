@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" language="java" name="com.awt.facebook" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="507" width="1275" x="19" y="23"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="com.awt.facebook.HomeController" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/HomeController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="135" y="306"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.awt.facebook.SigninController" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/SigninController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="234" width="345" x="278" y="260"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.awt.facebook.FriendsController" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/FriendsController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="809" y="370"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.awt.facebook.GraphController" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/GraphController.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1137" y="360"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <note id="6">    
+    <position height="45" width="143" x="67" y="126"/>    
+    <text><![CDATA[Handles requests for the application home page.]]>
+    </text>  
+  </note>  
+  <note id="7">    
+    <position height="74" width="200" x="311" y="106"/>    
+    <text><![CDATA[Handles the redirect from the ProviderSigninController by returning the signed-in view. It also handles users signout]]>
+    </text>  
+  </note>  
+  <note id="8">    
+    <position height="71" width="220" x="687" y="104"/>    
+    <text><![CDATA[This controller handles all the operation regarding the friends list, the common friends selection and the common friends list pages.]]>
+    </text>  
+  </note>  
+  <note id="9">    
+    <position height="58" width="200" x="1017" y="112"/>    
+    <text><![CDATA[This controller handles all the operation regarding the friends graph page.]]>
+    </text>  
+  </note>  
+  <text-link id="10">    
+    <link-end type="SOURCE" refId="7"/>    
+    <link-end type="TARGET" refId="3"/>  
+  </text-link>  
+  <text-link id="11">    
+    <link-end type="SOURCE" refId="9"/>    
+    <link-end type="TARGET" refId="5"/>  
+  </text-link>  
+  <text-link id="12">    
+    <link-end type="SOURCE" refId="8"/>    
+    <link-end type="TARGET" refId="4"/>  
+  </text-link>  
+  <text-link id="13">    
+    <link-end type="SOURCE" refId="6"/>    
+    <link-end type="TARGET" refId="2"/>  
+  </text-link>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

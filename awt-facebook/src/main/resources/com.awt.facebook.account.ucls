@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" language="java" name="com.awt.facebook.account" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/account" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="519" width="1084" x="59" y="16"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="com.awt.facebook.account.SimpleConnectionSignUp" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/account/SimpleConnectionSignUp.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="170" y="272"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.awt.facebook.account.FriendshipsInterceptor" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/account/FriendshipsInterceptor.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="878" y="280"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.awt.facebook.account.SimpleSignInAdapter" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/account/SimpleSignInAdapter.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="468" y="265"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.awt.facebook.account.UserId" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/account/UserId.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="697" y="443"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.awt.facebook.account.UserCookieGenerator" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/account/UserCookieGenerator.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="197" y="442"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <note id="7">    
+    <position height="100" width="200" x="77" y="71"/>    
+    <text><![CDATA[This class is used for specifying the identifier of the user that will be used for the creation of the persistent connection into the database. Usually this is used for wiring the application user id with the connection. As far as we avoid user registration in our application, we simply use the user Facebook id.]]>
+    </text>  
+  </note>  
+  <note id="8">    
+    <position height="100" width="200" x="347" y="83"/>    
+    <text><![CDATA[This class is used for the application user sign-in. Usually this is used for register the used in a security-context. As far as we avoid user registration in our application, we simply set a cookie using the UserCookieGenerator object with the user Facebook id. Obviously, for security reasons, we encrypt this value using a TextEncryptor. This value will be used for identify different users.]]>
+    </text>  
+  </note>  
+  <note id="9">    
+    <position height="68" width="200" x="767" y="85"/>    
+    <text><![CDATA[This interceptor handles the database friendships storing operation after a user sign-in operation.]]>
+    </text>  
+  </note>  
+  <note id="10">    
+    <position height="57" width="200" x="358" y="407"/>    
+    <text><![CDATA[Utility class for managing the user cookie that remembers the signed-in user.]]>
+    </text>  
+  </note>  
+  <note id="11">    
+    <position height="100" width="200" x="855" y="397"/>    
+    <text><![CDATA[Usually this class is used for retrieving a user id from a security-context. As far as we identify users by reading a cookie value, we don't need this class. But for some reason this is required by the Social Spring API. So we created it to avoid errors, but without really using it.]]>
+    </text>  
+  </note>  
+  <text-link id="12">    
+    <link-end type="SOURCE" refId="10"/>    
+    <link-end type="TARGET" refId="6"/>  
+  </text-link>  
+  <text-link id="13">    
+    <link-end type="SOURCE" refId="11"/>    
+    <link-end type="TARGET" refId="5"/>  
+  </text-link>  
+  <text-link id="14">    
+    <link-end type="SOURCE" refId="9"/>    
+    <link-end type="TARGET" refId="3"/>  
+  </text-link>  
+  <text-link id="15">    
+    <link-end type="SOURCE" refId="7"/>    
+    <link-end type="TARGET" refId="2"/>  
+  </text-link>  
+  <association id="16">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="17" name="userCookieGenerator">        
+        <position height="18" width="111" x="362" y="334"/>      
+      </attribute>      
+      <multiplicity id="18" minimum="0" maximum="1">        
+        <position height="16" width="23" x="339" y="351"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <text-link id="19">    
+    <link-end type="SOURCE" refId="8"/>    
+    <link-end type="TARGET" refId="4"/>  
+  </text-link>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

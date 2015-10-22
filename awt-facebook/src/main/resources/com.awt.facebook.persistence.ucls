@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.6" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true">  
+  <package id="1" language="java" name="com.awt.facebook.persistence" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/persistence" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="592" width="1135" x="4" y="9"/>    
+    <display autosize="false" stereotype="true" accessors="true"/>  
+  </package>  
+  <interface id="2" language="java" name="com.awt.facebook.persistence.FriendshipsDao" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/persistence/FriendshipsDao.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="163" y="171"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="3" language="java" name="com.awt.facebook.persistence.FriendshipRowMapper" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/persistence/FriendshipRowMapper.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="725" y="371"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.awt.facebook.persistence.FriendshipsDaoHibernate" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/persistence/FriendshipsDaoHibernate.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="172" y="459"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.awt.facebook.persistence.FriendshipsDaoJdbc" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/persistence/FriendshipsDaoJdbc.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="456" y="448"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.awt.facebook.persistence.Friendship" project="awt-facebook" 
+    file="/awt-facebook/src/main/java/com/awt/facebook/persistence/Friendship.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="966" y="450"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <note id="7">    
+    <position height="117" width="200" x="366" y="119"/>    
+    <text><![CDATA[The data access object of friendships used to perform all operation with the database. The user of this interface has precise control of all operation of storing and deletion in the friendships table.]]>
+    </text>  
+  </note>  
+  <note id="8">    
+    <position height="61" width="200" x="619" y="119"/>    
+    <text><![CDATA[The RowMapper used by the FriendshipsDaoJdbc object for mapping the query results
+
+]]>
+    </text>  
+  </note>  
+  <note id="9">    
+    <position height="129" width="244" x="879" y="118"/>    
+    <text><![CDATA[The friendship entity class. It has three attributes: createdBy is the id of the user that has created the friendship; firstId and secondId are the ids used for identifying the friendship relation. In the application two Friendship with the firstId and secondId attributes swapped are considered equals.]]>
+    </text>  
+  </note>  
+  <text-link id="10">    
+    <link-end type="SOURCE" refId="7"/>    
+    <link-end type="TARGET" refId="2"/>  
+  </text-link>  
+  <realization id="11">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <realization id="12">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="2"/>  
+  </realization>  
+  <text-link id="13">    
+    <link-end type="SOURCE" refId="8"/>    
+    <link-end type="TARGET" refId="3"/>  
+  </text-link>  
+  <text-link id="14">    
+    <link-end type="SOURCE" refId="9"/>    
+    <link-end type="TARGET" refId="6"/>  
+  </text-link>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

@@ -1,0 +1,35 @@
+/*body,#main {height: auto; min-height: 100%;}
+
+ footer { 
+            position: relative;
+            margin-top: -75px; 
+            height: 75px;
+            clear:both;
+        } 
+
+ #main { padding-bottom: 75px; 
+            overflow:hidden;
+            top: 75px; bottom: 0; left: 0; right: 0;        
+	        padding-bottom: 75px;    
+            position: absolute;
+        height:100%;
+        }  
+
+#main { height:80%;}
+footer {
+height:20%;
+}
+*/
+#parentCanvas{align-self: center;
+    height: 100%;
+ 
+}
+#ribbonLines {
+    width: inherit;
+    height: inherit;
+    background-image: url(../img/stars1280.jpg);
+}
+
+.fi-social-facebook {
+	font-size: 48px;
+}
