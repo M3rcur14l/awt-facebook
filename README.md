@@ -1,1 +1,4 @@
 # awt-facebook
+Developers: Antonello Fodde & Chai Botta
+
+The Facebook Analyst app is a web application which allows all the Facebook’s users to discover relationship between their friends. The system let the user to connect his Facebook account with the web application and show some personal useful information related to the user such as name, nickname, location and personal image. It’s shown also the number of friends. If the user click on the Friends button on the top-navigation bar the entire list of friends is shown. From the list it is possible to select all or just some friends and by this way a friendship graphical network is shown. The user can still discover more on his friends just by clicking on each node into the graph. Information such as networks metrics (Degree, Centrality and Betweenness) and friends’ public data will be shown in a box.
